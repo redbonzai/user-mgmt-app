@@ -1,0 +1,40 @@
+.form-container {
+  display: flex;
+  flex-direction: column; /* Align items in a column */
+  align-items: center; /* Center items horizontally */
+  justify-content: center;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.back-button-container {
+  align-self: flex-start; /* Align back button to the start */
+  margin-bottom: 20px; /* Space between back button and form */
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px; /* Square button */
+  height: 40px; /* Square button */
+}
+
+.form-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add some shadow for depth */
+  width: 300px; /* Adjust width as needed */
+}
+
+mat-form-field {
+  width: 100%;
+  margin-bottom: 16px; /* Space between form fields */
+}
+
+button {
+  width: 100%; /* Full width button */
+}
