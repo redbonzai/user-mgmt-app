@@ -1,0 +1,23 @@
+.user-list-container {
+  margin-top: 20px; /* Adjust the top margin as needed */
+  padding: 20px;    /* Add padding around the edges */
+  box-sizing: border-box;
+  background-color: white;
+  border-radius: 8px; /* Optional: Add some border radius for rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add some shadow for depth */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+button {
+  margin: 5px;
+}

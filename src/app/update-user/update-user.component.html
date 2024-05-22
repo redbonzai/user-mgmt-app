@@ -1,0 +1,29 @@
+<div class="form-container">
+  <div class="back-button-container">
+    <button mat-icon-button color="warn" (click)="goBack()" class="back-button">
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+  </div>
+  <div class="form-content">
+    <h2>Update User</h2>
+    <form (ngSubmit)="updateUser()" #userForm="ngForm">
+      <mat-form-field appearance="fill">
+        <mat-label>Username</mat-label>
+        <input matInput placeholder="Username" name="name" [(ngModel)]="user.name" required>
+        <mat-error *ngIf="userForm.controls['username']?.invalid && userForm.controls['username']?.touched">
+          Username is required
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="Email" name="email" [(ngModel)]="user.email" required email>
+        <mat-error *ngIf="userForm.controls['email']?.invalid && userForm.controls['email']?.touched">
+          Please enter a valid email address
+        </mat-error>
+      </mat-form-field>
+
+      <button mat-raised-button type="submit" color="primary" [disabled]="userForm.invalid">Update</button>
+    </form>
+  </div>
+</div>
