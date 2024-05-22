@@ -1,0 +1,23 @@
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.form-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add some shadow for depth */
+  width: 300px; /* Adjust width as needed */
+  text-align: center; /* Center align the text */
+}
+
+button {
+  margin: 10px; /* Space between buttons */
+}

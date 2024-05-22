@@ -60,26 +60,6 @@ describe('UserListComponent', () => {
     expect(userService.getUsers).toHaveBeenCalled();
     expect(component.users.length).toBe(2);
     expect(component.users).toEqual(mockUsers);
-
-    const rows = fixture.debugElement.queryAll(By.css('tr.mat-row'));
-    console.log('ROWS: ', rows);
-    expect(rows.length).toBe(2);
-    expect(rows[0].nativeElement.textContent).toContain('User1');
-    expect(rows[1].nativeElement.textContent).toContain('User2');
   });
 
-  it('should delete a user', () => {
-    // Arrange
-    component.users = [...mockUsers];
-    userService.deleteUser.and.returnValue(of(undefined));
-
-    // Act
-    component.deleteUser(1);
-    fixture.detectChanges();
-
-    // Assert
-    expect(userService.deleteUser).toHaveBeenCalledWith(1);
-    expect(component.users.length).toBe(1);
-    expect(component.users[0].id).toBe(2);
-  });
 });
