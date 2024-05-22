@@ -1,9 +1,9 @@
-import { Component } from '@angular/core';
+import {Component, ViewChild} from '@angular/core';
 import { Router } from '@angular/router';
 import { UserService, User } from '../services/user.service';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import {FormsModule, NgForm} from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
@@ -23,6 +23,7 @@ import { MatButtonModule } from '@angular/material/button';
   styleUrls: ['./create-user.component.css'],
 })
 export class CreateUserComponent {
+  @ViewChild('userForm', { static: true }) userForm!: NgForm;
   user: User = { id: 0, name: '', email: '' };
 
   constructor(
@@ -31,8 +32,10 @@ export class CreateUserComponent {
   ) {}
 
   createUser(): void {
-    this.userService.createUser(this.user).subscribe(() => {
-      this.router.navigate(['/']);
-    });
+    if (this.userForm.valid) {
+      this.userService.createUser(this.user).subscribe(() => {
+        this.router.navigate(['/']);
+      });
+    }
   }
 }
