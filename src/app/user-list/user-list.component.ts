@@ -30,10 +30,4 @@ export class UserListComponent implements OnInit {
       console.log('USERS RESPONSE: ', users);
     });
   }
-
-  // deleteUser(id: number): void {
-  //   this.userService.deleteUser(id).subscribe(() => {
-  //     this.users = this.users.filter((user) => user.id !== id);
-  //   });
-  // }
 }
