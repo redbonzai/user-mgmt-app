@@ -49,7 +49,7 @@ This will start the Angular development server, and you can access the applicati
 To run the tests for the project, use the following command:
 
 ```sh
-pnpm ng test
+pnpm run test
 ```
 
 This command will start the Karma test runner and execute all the tests defined in the project. You can view the test results in the console and in the browser.
